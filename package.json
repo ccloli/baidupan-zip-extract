@@ -1,0 +1,28 @@
+{
+  "name": "baidupan-zip-extract",
+  "version": "1.0.0",
+  "description": "Extract files from \"broken\" Zip file downloaded from pan.baidu.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "baidupan-zip-extract": "index.js",
+    "bdzip-extract": "index.js"
+  },
+  "author": "ccloli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccloli/baidupan-zip-extract.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ccloli/baidupan-zip-extract/issues"
+  },
+  "homepage": "https://github.com/ccloli/baidupan-zip-extract#readme",
+  "license": "MIT",
+  "dependencies": {
+    "iconv-lite": "^0.4.19",
+    "string-width": "^2.1.1"
+  }
+}
