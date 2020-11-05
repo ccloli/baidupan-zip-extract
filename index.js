@@ -588,23 +588,23 @@ function sortToFileFolder(list) {
 
 		// the zip file should be MS-DOS format, but who knows
 		if (isUnix) {
-			// file
-			if (fileAttr & UNIXATTRIBUTE.FILE) {
-				files.push(elem);
-			}
 			// folder
-			else if (fileAttr & UNIXATTRIBUTE.DIRECTORY) {
+			if (fileAttr & UNIXATTRIBUTE.DIRECTORY) {
 				folders.push(elem);
+			}
+			// file
+			else if (fileAttr & UNIXATTRIBUTE.FILE) {
+				files.push(elem);
 			}
 		}
 		else {
-			// file
-			if (fileAttr & FATATTRIBUTE.ARCHIVE) {
-				files.push(elem);
-			}
 			// folder
-			else if (fileAttr & FATATTRIBUTE.DIRECTORY) {
+			if (fileAttr & FATATTRIBUTE.DIRECTORY) {
 				folders.push(elem);
+			}
+			// file
+			else if (fileAttr & FATATTRIBUTE.ARCHIVE) {
+				files.push(elem);
 			}
 		}
 	});
